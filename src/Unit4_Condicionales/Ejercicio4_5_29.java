@@ -1,10 +1,14 @@
 package Unit4_Condicionales;
 
+import java.util.Scanner;
+
 /* @author: Saulolo */
 
 public class Ejercicio4_5_29 {
 
     public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
         
         /*Realiza un programa que calcule el precio de un desayuno. El programa 
         preguntará primero qué ha tomado el usuario de comer: palmera, donut o
@@ -31,6 +35,67 @@ public class Ejercicio4_5_29 {
         
         System.out.println("PRECIO DEL DESAYUNO");
         System.out.println("-------------------");
+        
+        String comida = "";
+        String acompaniante = "";
+        String bebida = "";
+        double costoComida = 0;
+        double costoacompaniante = 0;
+        double costoBebida = 0;
+        double total = 0;
+        
+        System.out.println("¿Qué ha tomado de comer? (palmera, donut o pitufo): ");
+        comida = input.next();
+        
+        switch (comida) {
+            case "palmera":
+                costoComida = 1.40;
+                break;
+            case "donut":
+                costoComida = 1;
+                break;
+            case "pitufo":
+                System.out.println("¿Con qué se ha tomado el pitufo? (aceite o tortilla): ");
+                acompaniante = input.next();
+                switch (acompaniante) {
+                    case "aceite":
+                        costoacompaniante = 1.20;
+                        break;
+                    case "tortilla":
+                        costoacompaniante = 1.60;
+                        break;
+                    default:
+                        System.out.println("Opción no válida");
+                }
+                
+                break;
+            default:
+                System.out.println("Opción no válida");  
+        }
+        
+        
+        
+        System.out.println("¿Qué ha tomado de beber? (zumo o café):");
+        bebida = input.next();
+        
+        switch (bebida) {
+            case "zumo":
+                costoBebida = 1.50;
+                break;
+            case "cafe":
+                costoBebida = 1.20;
+                break;
+            default:
+                System.out.println("Opción no válida");
+        }
+        
+        System.out.println(acompaniante + ": " + costoacompaniante);
+        System.out.println(bebida + ": " + costoBebida);
+        
+        total = costoComida + costoacompaniante + costoBebida;
+        System.out.println("Total desayuono: " + total);
+        
+    
         
     }
     
