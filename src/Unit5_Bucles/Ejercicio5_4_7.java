@@ -24,19 +24,19 @@ public class Ejercicio5_4_7 {
         int numero;
         
         
-//        for (int i = 0; i < 4; i++) {
-//            System.out.println("Ingresa la clave de la caja fuerte: ");
-//            numero = input.nextInt();
-//            if (numero == clave) {
-//                System.out.println("La caja fuerte se ha abierto satisfactoriamente.");
-//                break;
-//            } 
-//            
-//            else {
-//                System.out.println("Lo siento, esa no es la combinación.");
-//            }
-//
-//        }
+        for (int i = 0; i < 4; i++) {
+            System.out.println("Ingresa la clave de la caja fuerte: ");
+            numero = input.nextInt();
+            if (numero == clave) {
+                System.out.println("La caja fuerte se ha abierto satisfactoriamente.");
+                break;
+            } 
+            
+            else {
+                System.out.println("Lo siento, esa no es la combinación.");
+            }
+
+        }
         
         System.out.println("==========================");
         System.out.println("SOLUCIÓN LIBRO");
@@ -54,10 +54,15 @@ public class Ejercicio5_4_7 {
             } else {
                 System.out.println("Clave incorrecta.");
             }
+            intentos--;
             
         } while ((intentos > 0) && (!acertado));
         
-        
-
+        if(acertado){
+            System.out.println("Ha abierto la caja fuerte.");
+        }
+        else{
+            System.out.println("Lo siento, ha agotado las 4 oportunidades.");
+        }
     }
 }

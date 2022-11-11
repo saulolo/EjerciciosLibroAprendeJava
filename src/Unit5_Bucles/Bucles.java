@@ -34,7 +34,7 @@ public class Bucles {
         
         /*EJEMPLO: Pedir números por teclado hasta que el usuario ingrese un 
         número negativo.*/
-//        System.out.println("Por favor, vaya introduciendo númmeros y pulsando ennter.");
+//        System.out.println("Por favor, vaya introduciendo númmeros y pulsando enter.");
 //        System.out.println("Para terminar, introduzca un número negativo.");
 //        
 //        int numeroIntroducido = 0;
